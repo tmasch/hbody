@@ -1,0 +1,112 @@
+digraph G 
+{
+
+  edge [fontname="FreeSans.ttf",fontsize="10",labelfontname="FreeSans.ttf",labelfontsize="10"];
+  node [fontname="FreeSans.ttf",fontsize="10",shape=record];
+  rankdir=LR;
+  nodesep=0.2;
+  ranksep=0.1;
+  splines=true;
+
+subgraph cluster_1 {
+Node1 [label="utility_routines",height=0.2,width=0.4,color="black", fillcolor="cornflowerblue", style="filled",URL="$namespaceutility__routines.html#ad609ebee68de3065ad4ca5471deaf69e",tooltip="not supposed to be here"];
+Node2 [label="relativity_routines",height=0.2,width=0.4,color="black", fillcolor="cornflowerblue", style="filled",URL="$namespacerelativity__routines.html#a4cb6e03195ca76319d0e4dfff6601761",tooltip="tides3 no other calls GR tidal energy loss for interacting stars."];
+Node3 [label="external_forces",height=0.2,width=0.4,color="black", fillcolor="cornflowerblue", style="filled",URL="$namespaceexternal__forces.html#a430a958be587d2317b4f2ef02805e8a6",tooltip="External potential and virial energy."];
+Node4 [label="stellar_evolution",height=0.2,width=0.4,color="black", fillcolor="cornflowerblue", style="filled",URL="$namespacestellar__evolution.html#a15007ad329889dd21eda00fbb467d7d8"];
+}
+Node3 -> Node1 [color="cornflowerblue"];
+Node4 -> Node1 [color="cornflowerblue"];
+Node4 -> Node2 [color="cornflowerblue"];
+
+
+
+Node10 -> Node5 [color="magenta"];
+Node10 -> Node8 [color="yellow"];
+Node10 -> Node1 [color="cornflowerblue"];
+Node11 -> Node5 [color="magenta"];
+Node11 -> Node8 [color="yellow"];
+Node11 -> Node1 [color="cornflowerblue"];
+
+subgraph cluster_2 {
+Node9 [label="binary_evolution",height=0.2,width=0.4,color="black", fillcolor="maroon", style="filled",URL="$namespacebinary__evolution.html#a54823f2a9d91c7e38d1e440c1f227dcd"];
+Node10 [label="triple_routines",height=0.2,width=0.4,color="black", fillcolor="orange", style="filled",URL="$namespacetriple__routines.html#a95d9177b5fed9d4dfa2b00f395985796"];
+Node11 [label="quad_routines",height=0.2,width=0.4,color="black", fillcolor="orangered", style="filled",URL="$namespacequad__routines.html#a077a700183d070e79ccb9c58f698afff"];
+}
+
+subgraph cluster_3 {
+Node12 [label="analysis_routines",height=0.2,width=0.4,color="black", fillcolor="skyblue", style="filled",URL="$namespaceanalysis__routines.html#afb89c6067a98e1885d6129bda8174f38"];
+Node13 [label="io_routines",height=0.2,width=0.4,color="black", fillcolor="slateblue", style="filled",URL="$namespaceio__routines.html#ae9b3de4989ab35b76bfa7c8a9deeff80"];
+Node14 [label="startup_routines",height=0.2,width=0.4,color="black", fillcolor="steelblue", style="filled",URL="$namespacestartup__routines.html#a9c99c02719f5f0407194bcf79a06ea79"];
+}
+Node12 -> Node5 [color="magenta"];
+Node12 -> Node7;
+Node12 -> Node3 [color="cornflowerblue"];
+Node12 -> Node1 [color="cornflowerblue"];
+Node13 -> Node1 [color="cornflowerblue"];
+Node13 -> Node4 [color="cornflowerblue"];
+Node13 -> Node12;
+Node13 -> Node5 [color="magenta"];
+Node14 -> Node1 [color="cornflowerblue"];
+Node14 -> Node5 [color="magenta"];
+Node14 -> Node8 [color="yellow"];
+Node14 -> Node4 [color="cornflowerblue"];
+Node14 -> Node3 [color="cornflowerblue"];
+Node14 -> Node12;
+
+
+subgraph cluster_4 {
+Node5 [label="nbutil_1",height=0.2,width=0.4,color="black", fillcolor="magenta", style="filled",URL="$namespacenbutil__1.html#acb53c07048bdb9bb86315685ae76927f"];
+Node6 [label="nbutil_2",height=0.2,width=0.4,color="black", fillcolor="cyan", style="filled",URL="$namespacenbutil__2.html#a395182ecd59bb83510502ed0b1a35f77",tooltip="binev References findj() (final) and status()"];
+Node7 [label="chain_routines",height=0.2,width=0.4,color="black", fillcolor="red", style="filled",URL="$namespacechain__routines.html#a710cf48595a7bfe72fe3fef4ea7ec6ba"];
+Node8 [label="nbody_utilities",height=0.2,width=0.4,color="black", fillcolor="yellow", style="filled",URL="$namespacenbody__utilities.html#a74e7091df9c5ce782d2703d96da3e749",tooltip="cmbody group Formation of c.m. body by collision."];
+}
+Node5 -> Node4 [color="cornflowerblue"];
+Node5 -> Node3 [color="cornflowerblue"];
+Node5 -> Node1 [color="cornflowerblue"];
+Node6 -> Node5 [color="magenta"];
+Node6 -> Node4 [color="cornflowerblue"];
+Node7 -> Node5 [color="magenta"];
+Node7 -> Node4 [color="cornflowerblue"];
+Node7 -> Node1 [color="cornflowerblue"];
+Node8 -> Node1 [color="cornflowerblue"];
+Node8 -> Node3 [color="cornflowerblue"];
+Node8 -> Node4 [color="cornflowerblue"];
+Node8 -> Node5 [color="magenta"];
+Node8 -> Node6;
+Node8 -> Node7;
+Node8 -> Node2 [color="cornflowerblue"];
+Node9 -> Node5 [color="magenta"];
+Node9 -> Node6;
+Node9 -> Node8 [color="yellow"];
+Node9 -> Node4 [color="cornflowerblue"];
+
+subgraph cluster_5 {
+Node15 [label="nbody_routines",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacenbody__routines.html#a66ef49c8a889d8519ce40fb49ff69b5c"];
+}
+Node15 -> Node1 [color="cornflowerblue"];
+Node15 -> Node14;
+Node15 -> Node13;
+Node15 -> Node8 [color="yellow"];
+Node15 -> Node5 [color="magenta"];
+Node15 -> Node9;
+Node15 -> Node10;
+Node15 -> Node11;
+Node15 -> Node7;
+Node15 -> Node12;
+Node15 -> Node3 [color="cornflowerblue"];
+
+
+subgraph cluster_6 {
+Node16 [label="nbody_main_program",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacenbody__routines.html#a66ef49c8a889d8519ce40fb49ff69b5c"];
+}
+Node16 -> Node1 [color="cornflowerblue"];
+Node16 -> Node14;
+Node16 -> Node13;
+Node16 -> Node8 [color="yellow"];
+Node16 -> Node15;
+Node16 -> Node10;
+Node16 -> Node11;
+Node16 -> Node4 [color="cornflowerblue"];
+
+}
+
